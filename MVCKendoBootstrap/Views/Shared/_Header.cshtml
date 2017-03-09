@@ -1,0 +1,59 @@
+﻿<script>
+    $(document).ready(function () {
+        var navigation = [
+            {
+                path: "@Url.Content("~/")",
+                text: "Home"
+            },
+            {
+                path: "@Url.Content("~/Home/About")",
+                text: "About"
+            }
+        ]
+
+        function CreateListElement(p, n, c) {
+            for (var i = 0; i < n.length; i++) {
+                var li = document.createElement("li");
+                var a = document.createElement("a");
+                a.innerText = n[i].text;
+                a.href = n[i].path;
+                li.appendChild(a);
+                
+                if (n[i].child) {
+                    var ul = document.createElement("ul");
+                    ul.className = c;
+                    CreateListElement(ul, n[i].child);
+                    li.appendChild(ul);
+                }
+                p.appendChild(li);
+            }
+        }
+
+        CreateListElement(document.getElementById("MfMenu"), navigation, "");
+        CreateListElement(document.getElementById("drawerList"), navigation, "km-list list-items");
+
+        $("#MfMenu").kendoMenu();
+    });
+</script>
+
+
+<div class="header">
+    <div class="title">
+        <a id="drawer-trigger" href="#" class="k-icon k-i-hbars smallScreen"></a>
+        <h1>
+            MVC Kendo Sample</h1>
+    </div>
+</div>
+<div class="menucontainer bigScreen">
+    <ul id="MfMenu">
+    </ul>
+</div>
+<div class="smallScreen">
+</div>
+@if(!string.IsNullOrEmpty(ViewBag.Title)) {
+<div class="subheader">
+    <div class="subTitle">
+        <h1>@ViewBag.Title</h1>
+    </div>
+</div>
+}

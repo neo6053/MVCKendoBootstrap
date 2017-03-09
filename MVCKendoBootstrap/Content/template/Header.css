@@ -1,0 +1,97 @@
+﻿/* Page Header */
+.header
+{
+    position: relative;
+    margin-bottom: 0px;
+    padding: 20px 10px 0px 10px;
+    height: 40px;
+    background-color: #00693C;
+}
+
+    .header h1 {
+        display: inline;
+    }
+
+nav a {
+    border: 0px solid #ccc;
+    /*background: #ddd;*/
+    color: white;
+    display: block;
+    text-decoration: none;
+    padding: .5em;
+}
+
+    nav a:hover {
+        color: #00693c;
+    }
+
+.title h1
+{
+    padding: 0;
+    margin: 0;
+    color: #FFFFFF;
+    border: none;
+    font-weight: normal;
+    font-size: 20px !important;
+}
+
+.menucontainer
+{
+}
+
+.title
+{
+    display: block;
+    text-align: left;
+}
+
+.subheader
+{
+    position: relative;
+    margin-bottom: 0px;
+    padding: 10px 5px 10px 10px;
+    height: 38px;
+}
+
+.subTitle
+{
+    margin-top: 0px;
+    height: 38px;
+    background-image: url(../images/SubHeader.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+}
+
+.subTitle h1
+{
+    /*color: #FFFF96;*/
+    padding: 0;
+    margin: 0;
+    color: #004C2D;
+    font-size: 14px;
+    font-weight: normal;
+    font-size: 20px !important;
+}
+
+/* Title Header */
+.TitleHeader 
+{
+    font-family:Verdana;
+    font-size:14px;
+    color: #004C2D;
+    text-align:left;
+    height: 27px;
+    background-image: url(../images/TitleHeader.jpg);
+    background-repeat: repeat-x;
+    background-position: bottom;
+    margin-bottom: 10px;
+    /*
+    border: 1px solid Gray;
+    background-color:#C5EAD8;
+    */
+}
+.TitleHeader span
+{
+    line-height:2;
+}
+  

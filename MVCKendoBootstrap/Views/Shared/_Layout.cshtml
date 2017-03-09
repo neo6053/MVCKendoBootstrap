@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/kendo/css")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/kendo")
+    @Scripts.Render("~/bundles/template")
+    
+    @RenderSection("scripts", required: false)
+
+</head>
+<body>
+    <div id="drawer" data-swipe-to-open="true">
+        <div style="height: 60px; background-color: #00693C;"></div>
+        <ul id="drawerList" class="km-list list-items">
+        </ul>
+    </div>
+    <div id="content-container">
+        @Html.Partial("_Header")
+        <div class="body">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

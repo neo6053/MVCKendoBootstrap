@@ -1,0 +1,55 @@
+﻿.bigScreen {
+    display: none;
+}
+
+.smallScreen {
+    display: block;
+}
+
+#drawer-trigger {
+    vertical-align: inherit;
+}
+
+.list-items > li {
+    font-size: 16px;
+    border-bottom: #D0CECE 1px solid;
+}
+
+    .list-items > li > a {
+        text-decoration: none;
+    }
+
+#drawer
+{
+    display:block;
+    visibility:visible;
+}
+
+@media only screen and (min-width: 1281px) {
+    #drawer
+    {
+        display:none;
+        visibility:hidden;
+    }
+
+
+    .header {
+        /*background-image: url(../images/Corporate_MFC_Logo_White_En.png);*/
+        background-repeat: no-repeat;
+        background-position: right center;
+    }
+    
+    .bigScreen {
+        display: block !important;
+    }
+
+    .smallScreen {
+        display: none !important;
+    }
+}
+
+#sidebar {
+    /* panel background should be set to match design */
+    background-color: darkgray;
+    z-index: 999;
+}
